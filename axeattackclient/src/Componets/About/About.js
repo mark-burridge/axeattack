@@ -11,7 +11,7 @@ function About(props){
     const {classes} = props; 
     return(
         <div>
-            This is the start of the about page. testing
+            This is the start of the about page.
         </div>
     );
 }
