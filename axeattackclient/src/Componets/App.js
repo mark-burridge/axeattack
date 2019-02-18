@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Header from './Global/Header';
-import img from '../Images/axebackground.jpg'
+import img from '../Images/backgroundOne.jpg'
 import css from '../../src/index.css'
 import Main from './Main'
 

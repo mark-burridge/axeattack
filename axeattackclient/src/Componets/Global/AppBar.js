@@ -15,13 +15,18 @@ const styles = {
   },
   grow: {
     flexGrow: 1,
+    color: 'white'
   },
   menuButton: {
     marginLeft: -12,
     marginRight: 20,
+    color: 'white'
   },
   routerLink:{
-    textDecoration: 'none', 
+    textDecoration: 'none',
+  },
+  appBarBtn:{
+    color: 'white'
   }
 };
 
@@ -29,19 +34,19 @@ function ButtonAppBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{ background: 'transparent', boxShadow: 'none'}}>
+      <AppBar position="static" style={{ background: 'black', boxShadow: 'none'}}>
         <Toolbar>
           <Link to='/'>
-            <IconButton className={classes.menuButton} color="Black" aria-label="Menu">
+            <IconButton className={classes.menuButton}aria-label="Menu">
               <GavelIcon />
             </IconButton>
           </Link>
-          <Typography variant="h6" color="Black" className={classes.grow}>
+          <Typography variant="h4" className={classes.grow}>
             Axe Attack
           </Typography>
-          <Button color="Black">Register</Button>
-          <Link to='/about' className={classes.routerLink}> <Button color="Black">About</Button></Link>
-          <Link to='/contact' className={classes.routerLink}><Button color="Black">Contact</Button></Link>
+          <Button className={classes.appBarBtn}>Register</Button>
+          <Link to='/about' className={classes.routerLink}> <Button className={classes.appBarBtn}>About</Button></Link>
+          <Link to='/contact' className={classes.routerLink}><Button className={classes.appBarBtn}>Contact</Button></Link>
         </Toolbar>
       </AppBar>
     </div>
