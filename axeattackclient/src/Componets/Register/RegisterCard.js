@@ -8,50 +8,45 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import CustomTextField from '../Global/CustomTextField'
+import img from '../../Images/IMG_5049.JPG'
 
 const styles = {
-  card: {
-    maxWidth: 345,
-  },
-  media: {
-    height: 140,
-  },
-};
-
-function RegistarCard(props) {
-  const { classes } = props;
-  return (
-    <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="/static/images/cards/contemplative-reptile.jpg"
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            Lizard
-          </Typography>
-          <Typography component="p">
-            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
-            across all continents except Antarctica
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    </Card>
-  );
-}
-
-RegistarCard.propTypes = {
-  classes: PropTypes.object.isRequired,
-};
-
-export default withStyles(styles)(RegistarCard);
+    card: {
+      maxWidth: 342,
+    },
+    media: {
+      objectFit: 'cover',
+    },
+  };
+  
+  function ImgMediaCard(props) {
+    const { classes } = props;
+    return (
+      <Card className={classes.card}>
+          <CardMedia
+            component="img"
+            alt="Register for Axe attack"
+            className={classes.media}
+            image={img}
+            title="Contemplative Reptile"
+          />
+          <CardContent>
+            <CustomTextField labelName={'First Name'}/>
+            <CustomTextField labelName={'Last Name'}/>
+            <CustomTextField labelName={'Email'}/>
+          </CardContent>
+        <CardActions>
+          <Button size="small" color="primary">
+            Submit
+          </Button>
+        </CardActions>
+      </Card>
+    );
+  }
+  
+  ImgMediaCard.propTypes = {
+    classes: PropTypes.object.isRequired,
+  };
+  
+  export default withStyles(styles)(ImgMediaCard);

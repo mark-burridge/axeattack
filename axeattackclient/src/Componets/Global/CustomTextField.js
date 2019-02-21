@@ -95,7 +95,7 @@ function CustomizedInputs(props) {
       <MuiThemeProvider theme={theme}>
         <TextField
           className={classes.margin}
-          label="MuiThemeProvider"
+          label= {props.labelName}
           id="mui-theme-provider-standard-input"
         />
       </MuiThemeProvider>

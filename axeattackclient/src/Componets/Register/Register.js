@@ -11,7 +11,12 @@ const styles = {
 function Register(props){
     const {classes} = props; 
     return(
-        <RegisterCard></RegisterCard>
+        <Grid container>
+            <Grid item xs={12} align="center">
+                <RegisterCard></RegisterCard>
+            </Grid>
+        </Grid>
+           
     );
 }
 
