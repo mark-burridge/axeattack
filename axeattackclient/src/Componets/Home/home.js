@@ -33,13 +33,11 @@ function Home(props){
     return(
         <div className={classes.rootContainer}>
             <Grid container spacing={24}>
-                <Grid container item xs={12}>
-                    <Grid item xs={6} align="center">
-                        <HomeAboutCard></HomeAboutCard>
-                    </Grid>
-                    <Grid item xs={6} align="center">
-                        <HomeContactCard></HomeContactCard>
-                    </Grid>
+                <Grid item xs={6} align="center">
+                    <HomeAboutCard></HomeAboutCard>
+                </Grid>
+                <Grid item xs={6} align="center">
+                    <HomeContactCard></HomeContactCard>
                 </Grid>
             </Grid>
         </div>

@@ -34,7 +34,7 @@ function ButtonAppBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
-      <AppBar position="static" style={{ background: 'black', boxShadow: 'none'}}>
+      <AppBar position="static" style={{ background: 'black', boxShadow: 'none', marginBottom: '50px'}}>
         <Toolbar>
           <Link to='/'>
             <IconButton className={classes.menuButton}aria-label="Menu">
