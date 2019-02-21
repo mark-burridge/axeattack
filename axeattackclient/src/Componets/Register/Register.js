@@ -2,20 +2,21 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Grid from '@material-ui/core/Grid';
+import RegisterCard from './RegisterCard'
 import CustomTextField from '../Global/CustomTextField';
 const styles = {
   
 };
 
-function About(props){
+function Register(props){
     const {classes} = props; 
     return(
-        <div>Hello</div>
+        <RegisterCard></RegisterCard>
     );
 }
 
-About.PropTypes = {
+Register.PropTypes = {
     classes: PropTypes.object.isRequired,
 }
 
-export default withStyles(styles)(About);
+export default withStyles(styles)(Register);

@@ -44,7 +44,7 @@ function ButtonAppBar(props) {
           <Typography variant="h4" className={classes.grow}>
             Axe Attack
           </Typography>
-          <Button className={classes.appBarBtn}>Register</Button>
+          <Link to='/register' className={classes.routerLink}> <Button className={classes.appBarBtn}>Register</Button></Link>
           <Link to='/about' className={classes.routerLink}> <Button className={classes.appBarBtn}>About</Button></Link>
           <Link to='/contact' className={classes.routerLink}><Button className={classes.appBarBtn}>Contact</Button></Link>
         </Toolbar>

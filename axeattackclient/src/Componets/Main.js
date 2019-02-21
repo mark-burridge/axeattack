@@ -4,6 +4,7 @@ import { withStyles } from '@material-ui/core/styles';
 import Home from './Home/home'
 import About from './About/About'
 import Contact from './Contact/Contact'
+import Register from './Register/Register'
 import {Switch, Route} from 'react-router-dom'
 const styles = {};
 
@@ -14,6 +15,7 @@ function Main(props){
           <Route exact path='/' component={Home}/>
           <Route path='/about' component={About}/>
           <Route path='/contact' component={Contact}/>
+          <Route path='/register' component={Register}/>
        </Switch>
     );
 }
