@@ -12,7 +12,7 @@ import RegisterForm from '../Register/RegisterForm'
 
 const styles = {
     card: {
-      maxWidth: 342,
+      maxWidth: 350,
     },
     media: {
       objectFit: 'cover',

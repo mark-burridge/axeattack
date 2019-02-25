@@ -2,7 +2,20 @@ import React from 'react';
 import TextField from '@material-ui/core/TextField'
 import Button from '@material-ui/core/Button'
 import PropTypes from 'prop-types';
+import Divider from '@material-ui/core/Divider'
 
+const divStyle = {
+    textAlign: 'left'
+  };
+
+  const btnStyle = {
+      backgroundColor: 'black', 
+      color: 'white'
+  }
+
+  const textBoxStyle = {
+      minWidth : 300
+  }
 class RegisterForm extends React.Component {
     constructor(props) {
         super(props);
@@ -23,28 +36,32 @@ class RegisterForm extends React.Component {
 
     render() {
       return (
+        <div style={divStyle}>
         <form onSubmit={this.handleSubmit}>
-            <TextField
+            <TextField style={textBoxStyle}
                 label= "First Name"
                 name="firstName"
                 value={this.state.firstName} 
                 onChange={this.handleChange}/>
-                <TextField
+            <br></br>
+            <TextField style={textBoxStyle}
                 label= "Last Name"
                 name="lastName"
                 value={this.state.lastName} 
                 onChange={this.handleChange}/>
-                <TextField
+            <br></br>
+            <TextField style={textBoxStyle}
                 label= "Email"
                 name="email"
                 value={this.state.email} 
                 onChange={this.handleChange}/>
-                <br></br>
-            <Button type="submit" size="small" color="default">
+            <br></br>
+            <br></br>
+            <Button type="submit" size="small" style={btnStyle}>
                 Submit
             </Button>
-        
         </form>
+        </div>
       );
     }
   }
