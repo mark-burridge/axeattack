@@ -30,7 +30,13 @@ class RegisterForm extends React.Component {
       }
     
       handleSubmit(event) {
-        alert('FirstName: ' + this.state.firstName + " Last Name: " + this.state.lastName + " email: " + this.state.email);
+
+        if(this.state.firstName == '' || this.state.lastName == '' || this.state.email == ''){
+            alert('All fields must be filled out before submission');
+        }else{
+            alert('FirstName: ' + this.state.firstName + " Last Name: " + this.state.lastName + " email: " + this.state.email);
+        }
+        
         event.preventDefault();
       }
 
