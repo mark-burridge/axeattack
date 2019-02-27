@@ -16,7 +16,12 @@ const divStyle = {
   const textBoxStyle = {
       minWidth : 300
   }
+
+  const footerStyle = {
+      paddingTop: '10px'
+  }
 class RegisterForm extends React.Component {
+    
     constructor(props) {
         super(props);
         this.state = {firstName: '', lastName:'', email:''};
@@ -62,10 +67,12 @@ class RegisterForm extends React.Component {
                 value={this.state.email} 
                 onChange={this.handleChange}/>
             <br></br>
-            <br></br>
-            <Button type="submit" size="small" style={btnStyle}>
-                Submit
-            </Button>
+            
+            <div style={footerStyle}>
+                <Button type="submit" size="small" style={btnStyle}>
+                    Submit
+                </Button>
+            </div>
         </form>
         </div>
       );
